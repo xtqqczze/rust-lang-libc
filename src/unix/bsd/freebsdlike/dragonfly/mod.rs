@@ -149,12 +149,12 @@ s! {
         pub st_ctime_nsec: c_long,
         pub st_size: off_t,
         pub st_blocks: i64,
-        pub __old_st_blksize: u32,
+        __old_st_blksize: u32,
         pub st_flags: u32,
         pub st_gen: u32,
-        pub st_lspare: i32,
+        st_lspare: Padding<i32>,
         pub st_blksize: i64,
-        pub st_qspare2: i64,
+        st_qspare2: Padding<i64>,
     }
 
     pub struct if_data {
